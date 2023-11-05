@@ -10,5 +10,10 @@
 using namespace std;
 int main()
 {
+	Render::Start(26,100);
+	Input::Start();
+	while(1)
+	{
+	}
 	return 0;
 }
