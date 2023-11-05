@@ -9,20 +9,32 @@
 #include "cui/textbox.hpp"
 using namespace std;
 using namespace Controls;
+void CreateButton(Button & btn,string id,string text,
+	short cx,short cy,short sx,short sy,
+	short fc,short bc,short mc
+);
 int main()
 {
 	Render::Start(26,100);
 	Input::Start();
 	Button btn1;
-	btn1.Name="BTN1";
-	btn1.CoordX=30,btn1.CoordY=10;
-	btn1.SizeX=40,btn1.SizeY=1;
-	btn1.ForgColor=15,btn1.BackColor=0;
-	btn1.MouseColor=7;
-	btn1.Caption="Start";
+	CreateButton(btn1,"BTN1","Start",30,10,40,1,15,0,7);
 	btn1.Join();
 	while(1)
 	{
 	}
 	return 0;
 }
+void CreateButton(Button & btn,string id,string text,
+	short cx,short cy,short sx,short sy,
+	short fc,short bc,short mc
+)
+{
+	btn.Name=id;
+	btn.CoordX=cx,btn.CoordY=cy;
+	btn.SizeX=sx,btn.SizeY=sy;
+	btn.ForgColor=fc,btn.BackColor=bc;
+	btn.MouseColor=mc;
+	btn.Caption=text;
+}
+
