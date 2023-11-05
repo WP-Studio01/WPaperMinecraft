@@ -17,9 +17,11 @@ int main()
 {
 	Render::Start(26,100);
 	Input::Start();
-	Button btn1;
-	CreateButton(btn1,"BTN1","Start",30,10,40,1,15,0,7);
+	Button btn1,btn2;
+	CreateButton(btn1,"BTN1","start",35,10,30,1,15,0,7);
+	CreateButton(btn2,"BTN2","exit", 35,14,30,1,15,0,7);
 	btn1.Join();
+	btn2.Join();
 	while(1)
 	{
 	}
